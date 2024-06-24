@@ -1,0 +1,34 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@ldf/server/^3.0.0/components/context.jsonld",
+  "@id": "urn:ldf-server:my",
+  "import": "preset-qpf:config-defaults.json",
+  "baseURL": "http://ldf.belgif.be/",
+  "title": "Belgif Linked Data Fragments server",
+  "datasources": [
+    {
+      "@id": "urn:ldf-server:myHdtSource",
+      "@type": "HdtDatasource",
+      "datasourceTitle": "Data.gov.be",
+      "description": "Data.gov.be metadata",
+      "datasourcePath": "/datagovbe",
+      "hdtFile": "/var/www/datagovbe.hdt"
+    }
+  ],
+	"prefixes": [ 
+		{ "prefix": "rdf",	"uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#" },
+		{ "prefix": "rdfs",	"uri": "http://www.w3.org/2000/01/rdf-schema#" },
+		{ "prefix": "owl",	"uri": "http://www.w3.org/2002/07/owl#" },
+		{ "prefix": "skos",	"uri": "http://www.w3.org/2004/02/skos/core#" },
+		{ "prefix": "xsd",	"uri": "http://www.w3.org/2001/XMLSchema#" },
+		{ "prefix": "dcterms",	"uri": "http://purl.org/dc/terms/" },
+		{ "prefix": "dcat",	"uri": "http://www.w3.org/ns/dcat#" },
+		{ "prefix": "foaf",	"uri": "http://xmlns.com/foaf/0.1/" },
+		{ "prefix": "locn",	"uri": "http://www.w3.org/ns/locn#" },
+		{ "prefix": "vcard",	"uri": "http://www.w3.org/2006/vcard/ns#" },
+   		{ "prefix": "geo",	"uri": "http://www.w3.org/2003/01/geo/wgs84_pos#" },
+		{ "prefix": "hydra",	"uri": "http://www.w3.org/ns/hydra/core#" },
+		{ "prefix": "void",	"uri": "http://rdfs.org/ns/void#" }
+	],
+	"logging": false, 
+	"loggingFile": "/var/log/ldf.log"
+}
